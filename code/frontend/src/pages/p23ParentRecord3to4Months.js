@@ -8,6 +8,8 @@ const P23ParentRecord3to4Months = () => {
   const setterUserId = localStorage.getItem('userId');
   const role = localStorage.getItem('role');
 
+  axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+
 const [formData, setFormData] = useState({
     // userId:'',
     userId:setterUserId ,
@@ -40,14 +42,14 @@ const [formData, setFormData] = useState({
                   try{
                   
                       // ページ遷移時にuserIdを基にDBからレコードを検索
-                      const response = await axios.post('http://localhost:5000/api/recordApi/getrecordP22', { setterUserId })
+                      const response = await axios.post('/api/recordApi/getrecordP22', { setterUserId })
                       // const response = await axios.post('recordApi/getrecordP22', { userId, page: 'ParentRecordThreeToFourMonths' })
                   
                             let record;
                   
                             // if(response.data.length === 0){
                             if(response.data === null){
-                              axios.post('http://localhost:5000/api/recordApi/crerecordP22',formData)
+                              axios.post('/api/recordApi/crerecordP22',formData)
                               // axios.post('recordApi/crerecordP22', { userId, page: 'ParentRecordThreeToFourMonths', newBody })
                               .then(response => {
                                 // record = response.data.body.split(',');
@@ -102,8 +104,8 @@ const [formData, setFormData] = useState({
     // const body = Object.values(formData).join(',');
     // const bodyArray = [userId, ...Object.values(formData)];
     // const body = bodyArray.join(',');
-    // axios.post('http://localhost:5000/api/recordApi/updrecordP22', { userId,page:'ParentRecordThreeToFourMonths' ,body })
-    const response = await axios.put('http://localhost:5000/api/recordApi/updrecordP22', {
+    // axios.post('/api/recordApi/updrecordP22', { userId,page:'ParentRecordThreeToFourMonths' ,body })
+    const response = await axios.put('/api/recordApi/updrecordP22', {
       setterUserId,
       formData
     });

@@ -15,6 +15,8 @@ const [formData, setFormData] = useState({
     role: 'parent'  
   });
 
+  axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+
   const handleChange = async (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -34,7 +36,7 @@ const [formData, setFormData] = useState({
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/authApi/register', formData);
+      const response = await axios.post('/api/authApi/register', formData);
       // const response = await axios.post('authApi/register', formData);
       if (response.data) {
         alert('登録が成功しました');

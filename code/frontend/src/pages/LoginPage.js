@@ -10,6 +10,8 @@ function LoginPage() {
     password: ''
   });
 
+  axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setLoginData({
@@ -21,7 +23,7 @@ function LoginPage() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/authApi/login', loginData);
+      const response = await axios.post('/api/authApi/login', loginData);
       // const response = await axios.post('authApi/login', loginData);
       // const { user, token } = response.data;
       if (response.data.token) {

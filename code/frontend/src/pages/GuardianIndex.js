@@ -21,6 +21,8 @@ const GuardianIndex = () => {
     status: '',
   });
 
+  axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+
   useEffect(() => {
 
     const fetchData = async() => {
@@ -57,7 +59,7 @@ const GuardianIndex = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/api/authApi/getUserById', { email });
+      const response = await axios.post('/api/authApi/getUserById', { email });
       // const response = await axios.post('registerApi/search-guardian', { email });
       if (response.data !== null) {
         setGuardianInfo(response.data);
@@ -75,7 +77,7 @@ const GuardianIndex = () => {
 
   const handleGuardianClick = async () => {
     try {
-      // const response = await axios.post('http://localhost:5000/api/authApi/getUserById', { email: guardianInfo.email });
+      // const response = await axios.post('/api/authApi/getUserById', { email: guardianInfo.email });
       // // const response = await axios.post('registerApi/get-guardian-mynumber', { email: guardianInfo.email });
       // if (response.data.success) {
         // localStorage.setItem('guardianUserId', response.data.guardianUserId);

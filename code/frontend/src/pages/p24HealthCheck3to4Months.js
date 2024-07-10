@@ -9,6 +9,8 @@ const P24HealthCheck3to4Months = () => {
   const setterUserId = localStorage.getItem('userId');
   const role = localStorage.getItem('role');
 
+  axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+
 const [formData, setFormData] = useState({
     userId:setterUserId,
     checkYear: '',
@@ -49,13 +51,13 @@ const [formData, setFormData] = useState({
                   try{
                   
                       // ページ遷移時にuserIdを基にDBからレコードを検索
-                      const response = await axios.post('http://localhost:5000/api/recordApi/getrecordP23', { setterUserId });
+                      const response = await axios.post('/api/recordApi/getrecordP23', { setterUserId });
                       // const response = await axios.post('recordApi/getrecordP23', { userId });
                             let record ;
                   
                             // if(response.data.length === 0){
                               if(response.data === null){ 
-                              axios.post('http://localhost:5000/api/recordApi/crerecordP23', formData)
+                              axios.post('/api/recordApi/crerecordP23', formData)
                               .then(response => {
                                 record =  Object.values(response.data);
                               })
@@ -111,8 +113,8 @@ const [formData, setFormData] = useState({
     const updateRecord = async () => {
       try{
     e.preventDefault();
-    // axios.post('http://localhost:5000/api/recordApi/updrecordP23', { userId,page:'ThreeToFourMonthsHealthCheck', body })
-    const response = await axios.put('http://localhost:5000/api/recordApi/updrecordP23', { 
+    // axios.post('/api/recordApi/updrecordP23', { userId,page:'ThreeToFourMonthsHealthCheck', body })
+    const response = await axios.put('/api/recordApi/updrecordP23', { 
     setterUserId,
     formData
   });
