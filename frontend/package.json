@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "private": true,
     "main": "index.js",
-    "homepage": "https://Shuhei-nokono.github.io/JPT2024hakka.git",
+    "homepage": "https://Shuhei-nokono.github.io/JPT2024hakka",
     "dependencies": {
         "axios": "^0.27.2",
         "date-fns": "^3.6.0",
