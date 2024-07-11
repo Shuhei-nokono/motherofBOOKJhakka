@@ -15,7 +15,7 @@ const [formData, setFormData] = useState({
     role: 'parent'  
   });
 
-  axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
+  // axios.defaults.baseURL = process.env.REACT_APP_API_BASE_URL;
 
   const handleChange = async (e) => {
     const { name, value } = e.target;

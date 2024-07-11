@@ -28,12 +28,12 @@ const cors = require('cors');
 
 
 const app = express();
-// app.use(cors());
-app.use(cors({
-  origin: 'http://46uhei.starfree.jp/', // フロントエンドのURLを指定
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true
-}));
+app.use(cors());
+// app.use(cors({
+//   origin: 'http://46uhei.starfree.jp/public/index.html', // フロントエンドのURLを指定
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true
+// }));
 
 connectDB();
 
