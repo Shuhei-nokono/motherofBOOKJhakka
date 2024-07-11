@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/JPT2024hakka/static/css/main.ebe91473.css",
-    "main.js": "/JPT2024hakka/static/js/main.6461e426.js",
+    "main.js": "/JPT2024hakka/static/js/main.1f776501.js",
     "index.html": "/JPT2024hakka/index.html",
     "main.ebe91473.css.map": "/JPT2024hakka/static/css/main.ebe91473.css.map",
-    "main.6461e426.js.map": "/JPT2024hakka/static/js/main.6461e426.js.map"
+    "main.1f776501.js.map": "/JPT2024hakka/static/js/main.1f776501.js.map"
   },
   "entrypoints": [
     "static/css/main.ebe91473.css",
-    "static/js/main.6461e426.js"
+    "static/js/main.1f776501.js"
   ]
 }
