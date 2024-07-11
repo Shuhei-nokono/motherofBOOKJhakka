@@ -26,12 +26,19 @@ Ubuntuを最新の状態に更新する。
 
 ### MongoDBのインストール
 
-#### 起動
+#### MongoDBの起動
 
-#### 自動起動設定
+#### MongoDBの自動起動設定
 
 ### 環境変数の設定
 MongoDBへのアクセスに必要な環境変数を設定します。
+
+フロントエンドのディレクトリ直下にて、`.env`を作成し、以下のように設定する。
+```
+MONGODB_URI=mongodb://localhost:27017/your-database-name
+JWT_SECRET=your-jwt-secret
+```
+
 
 ## パッケージのインストールとビルド
 
