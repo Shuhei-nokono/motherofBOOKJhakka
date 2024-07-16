@@ -7,7 +7,7 @@ import './index.css';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   // <React.StrictMode>
-    <Router>
+    <Router basename="/JPT2024hakka">
       <App />
     </Router>
   // </React.StrictMode>
