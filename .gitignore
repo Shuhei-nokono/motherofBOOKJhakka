@@ -35,7 +35,7 @@ bower_components/
 .DS_Store
 
 # Frontend build
-frontend/build
+# frontend/build
 frontend/node_modules
 backend/build
 backend/node_modules
