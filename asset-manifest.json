@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/JPT2024hakka/static/css/main.ebe91473.css",
-    "main.js": "/JPT2024hakka/static/js/main.1f776501.js",
-    "index.html": "/JPT2024hakka/index.html",
-    "main.ebe91473.css.map": "/JPT2024hakka/static/css/main.ebe91473.css.map",
-    "main.1f776501.js.map": "/JPT2024hakka/static/js/main.1f776501.js.map"
+    "main.css": "/motherfront/static/css/main.ebe91473.css",
+    "main.js": "/motherfront/static/js/main.3570a1e3.js",
+    "index.html": "/motherfront/index.html",
+    "main.ebe91473.css.map": "/motherfront/static/css/main.ebe91473.css.map",
+    "main.3570a1e3.js.map": "/motherfront/static/js/main.3570a1e3.js.map"
   },
   "entrypoints": [
     "static/css/main.ebe91473.css",
-    "static/js/main.1f776501.js"
+    "static/js/main.3570a1e3.js"
   ]
 }
