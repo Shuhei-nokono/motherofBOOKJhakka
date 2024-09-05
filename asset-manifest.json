@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/motherfront/static/css/main.ebe91473.css",
-    "main.js": "/motherfront/static/js/main.3570a1e3.js",
+    "main.js": "/motherfront/static/js/main.a7450957.js",
     "index.html": "/motherfront/index.html",
     "main.ebe91473.css.map": "/motherfront/static/css/main.ebe91473.css.map",
-    "main.3570a1e3.js.map": "/motherfront/static/js/main.3570a1e3.js.map"
+    "main.a7450957.js.map": "/motherfront/static/js/main.a7450957.js.map"
   },
   "entrypoints": [
     "static/css/main.ebe91473.css",
-    "static/js/main.3570a1e3.js"
+    "static/js/main.a7450957.js"
   ]
 }
